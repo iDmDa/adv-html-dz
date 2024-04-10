@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 $txt-black-color: #222222;
+$txt2-black-color: #232323;
+$txt-grey-color: #4f4f4f;
 $txt-red-color: #f16d7f;
+
 
 * {
     margin: 0;
@@ -60,28 +63,104 @@ body {
     position: absolute;
     left: 0px;
     top: 0px;
+    
+    & img {
+        position: absolute;
+        top: 15px;
+        left: 69px;
+    }
+    & summary {
+        list-style: none;
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 300;
+        letter-spacing: 0.025em;
+        color: $txt-black-color;
+        width: 87px;
+        height: 38px;
+        background-color: #cdcdcc;
+        background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%);
+        border: 1px solid #e6e6e6;
+        border-radius: 3px 0px 0px 3px;
+        padding-left: 15px;
+        cursor: pointer;
+        user-select: none;
+    }
+    & #browse-menu {
+        position: absolute;
+        width: 262px;
+        height: 530px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.17);
+        cursor: pointer;
+        user-select: none;
+    }
+    & .triangle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+        background-color: #ffffff;
+        top: -5px;
+        left: 68px;
+    }
+    & ul {
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+    & h2 {
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        color: $txt2-black-color;
+    }
+    & .line {
+        width: 236px;
+        height: 1px;
+        background-color: #e8e8e8;
+        margin-bottom: 10px;
+    }
+    & li {
+        display: block;
+        list-style: none;
+        font-size: 14px;
+        line-height: 28px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: $txt-grey-color;
+    }
+    & li:hover {
+        color: $txt-red-color;
+    }
 }
 
-#header-browse img {
+#myAccButton {
     position: absolute;
-    top: 15px;
-    right: 9px;
-}
+    left: 1239px;
+    top: 31px;
+    & img {
+        position: absolute;
+        top: 15px;
+        left: 109px;
+    }
+    & summary {
+        list-style: none;
+        width: 130px;
+        height: 38px;
+        background-color: $txt-red-color;
+        font-size: 15px;
+        line-height: 34px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+        padding-left: 19px;
+        cursor: pointer;
+        user-select: none;
+    }
 
-#header-browse summary {
-    list-style: none;
-    font-size: 14px;
-    line-height: 32px;
-    font-weight: 300;
-    letter-spacing: 0.025em;
-    color: $txt-black-color;
-    width: 87px;
-    height: 38px;
-    background-color: #cdcdcc;
-    background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%);
-    border: 1px solid #e6e6e6;
-    border-radius: 3px 0px 0px 3px;
-    padding-left: 15px;
 }
 
 #header-input {
@@ -102,13 +181,13 @@ body {
 #header-btn_search {
     position: absolute;
     top: 0px;
-    left: calc(87px + 317px - 38px);
+    left: calc(86px + 317px - 38px);
     width: 38px;
     height: 38px;
     background-color: #ffffff;
     border: 1px solid #e6e6e6;
     border-radius: 0px 3px 3px 0px;
-    border-radius: 3px 0px 0px 3px;
+
 }
 
 #header-menulayer {
@@ -120,21 +199,8 @@ body {
     background-color: #e8e8e8;
 }
 
-.test {
-    max-width: 100;
-    &-a1 {
-        height: 300px;
-        &_b1 {
-            border: #222222 1px solid;
-        }
-    }
-    &-a2 {
-        margin: 300px;
-    }
-    &:hover {
-        display: inline;
-        & xx {
-            background-color: #f16d7f;
-        }
-    }
+#shoppingcart {
+    position: absolute;
+    left: 1181px;
+    top: 40px;
 }
