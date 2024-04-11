@@ -21,7 +21,7 @@ body {
 
 #header-top-logo {
   position: absolute;
-  left: 227px;
+  left: 14.1875%;
   top: 25px;
 }
 
@@ -44,7 +44,7 @@ body {
 
 #header-input_layer {
   position: absolute;
-  left: 429px;
+  left: 26.8125%;
   top: 32px;
 }
 
@@ -79,6 +79,7 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 #header-browse #browse-menu {
@@ -91,6 +92,7 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 #header-browse .triangle {
@@ -134,8 +136,8 @@ body {
 }
 
 #myAccButton {
-  position: absolute;
-  left: 1239px;
+  position: relative;
+  left: 77.4375%;
   top: 31px;
 }
 #myAccButton img {
@@ -157,6 +159,7 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -195,6 +198,121 @@ body {
 
 #shoppingcart {
   position: absolute;
-  left: 1181px;
+  left: 73.8125%;
   top: 40px;
+}
+
+#myAcc-menu {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  margin-top: 16px;
+  width: 262px;
+  height: 440px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  left: -66px;
+  padding-left: 17px;
+}
+#myAcc-menu ul {
+  padding-top: 21px;
+}
+#myAcc-menu li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 229px;
+  height: 85px;
+}
+#myAcc-menu li img {
+  position: inherit;
+}
+#myAcc-menu li div {
+  display: block;
+}
+#myAcc-menu li div:nth-child(2) {
+  flex-grow: 1;
+  margin-top: 10px;
+  margin-left: 14px;
+}
+#myAcc-menu li div:nth-child(3) {
+  display: flex;
+  align-items: center;
+}
+#myAcc-menu li .summ-price {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f16d7f;
+}
+#myAcc-menu li .summ-price span {
+  font-size: 10px;
+}
+#myAcc-menu li h2 {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+  margin-bottom: 5px;
+}
+#myAcc-menu .line {
+  width: 229px;
+  height: 1px;
+  background-color: rgba(237, 237, 237, 0.74);
+  margin: 16px 0;
+}
+#myAcc-menu .price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 229px;
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+}
+#myAcc-menu .button {
+  width: 225px;
+  height: 50px;
+  margin-bottom: 11px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#myAcc-menu .checkout {
+  border: 1px solid #f16d7f;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f16d7f;
+}
+#myAcc-menu .checkout:hover {
+  background-color: #f16d7f;
+  color: #ffffff;
+}
+#myAcc-menu .gotocadt {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4a4a4a;
+}
+#myAcc-menu .gotocadt:hover {
+  background-color: #4a4a4a;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
