@@ -271,7 +271,14 @@ body {
             color: $txt-black-color;
             margin-bottom: 5px;
         }
+
+        &:hover {
+            background-color: #f9f9f9;
+        }
     }
+
+    
+
     & .line {
         width: 229px;
         height: 1px;
@@ -327,3 +334,44 @@ body {
         }
     }
 }
+
+#header-menulayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .memu-item {
+        display: inline-block;
+        position: relative;
+        padding: 5px 23px;
+        border: 1px solid black;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover .MegaMenu{
+            display: block;
+        }
+
+        h2 {
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $txt-black-color;
+        }
+
+        .MegaMenu {
+            display: none;
+            position: absolute;
+            width: 846px;
+            height: 310px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.17);
+            top: 35px;
+            left: 0;
+            padding: 21px 21px 20px 25px; 
+        }
+    }
+}
+
