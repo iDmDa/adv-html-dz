@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 * {
   margin: 0;
@@ -79,7 +80,6 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 #header-browse #browse-menu {
@@ -92,8 +92,8 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
+  z-index: 1;
 }
 #header-browse .triangle {
   position: absolute;
@@ -159,7 +159,6 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -215,10 +214,10 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   left: -66px;
   padding-left: 17px;
+  z-index: 1;
 }
 #myAcc-menu ul {
   padding-top: 21px;
@@ -329,15 +328,38 @@ body {
   display: inline-block;
   position: relative;
   padding: 5px 23px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
+#header-menulayer .memu-item:hover::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+  top: 30px;
+  left: 46%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+  box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.17);
+}
 #header-menulayer .memu-item:hover .MegaMenu {
-  display: block;
+  display: grid;
+}
+#header-menulayer .memu-item:hover:nth-child(5) .MegaMenu {
+  display: grid;
+  left: -50px;
+}
+#header-menulayer .memu-item:hover:nth-child(6) .MegaMenu {
+  display: grid;
+  left: -190px;
+}
+#header-menulayer .memu-item:hover:nth-child(7) .MegaMenu {
+  display: grid;
+  left: -310px;
 }
 #header-menulayer .memu-item h2 {
   font-size: 14px;
@@ -348,6 +370,8 @@ body {
 }
 #header-menulayer .memu-item .MegaMenu {
   display: none;
+  grid-template-columns: 1fr 1fr 1fr; /* Задаем три равные колонки */
+  grid-gap: 10px;
   position: absolute;
   width: 846px;
   height: 310px;
@@ -356,5 +380,78 @@ body {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
   top: 35px;
   left: 0;
-  padding: 21px 21px 20px 25px;
+  padding: 15px 21px 20px 25px;
+  z-index: 1;
+}
+#header-menulayer .memu-item .MegaMenu .column:nth-child(1) {
+  grid-column: 1;
+}
+#header-menulayer .memu-item .MegaMenu .column:nth-child(2) {
+  grid-column: 2;
+}
+#header-menulayer .memu-item .MegaMenu .column:nth-child(3) {
+  grid-column: 3;
+}
+#header-menulayer .memu-item .MegaMenu ul {
+  margin-bottom: 25px;
+}
+#header-menulayer .memu-item .MegaMenu h3 {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #232323;
+  margin-bottom: 13px;
+}
+#header-menulayer .memu-item .MegaMenu h3::after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 0px;
+  width: 235px;
+  height: 1px;
+  background-color: #e8e8e8;
+}
+#header-menulayer .memu-item .MegaMenu li {
+  list-style: none;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #646464;
+}
+#header-menulayer .memu-item .MegaMenu li:hover {
+  color: #f16d7f;
+}
+
+#header-biglogo {
+  position: relative;
+}
+#header-biglogo div {
+  position: absolute;
+  top: 224px;
+  left: 254px;
+}
+#header-biglogo div::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 97px;
+  background-color: #f16d7f;
+  left: -24px;
+  top: 15px;
+}
+#header-biglogo h1 {
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: 0.025em;
+  color: #222222;
+}
+#header-biglogo h2 {
+  font-size: 40px;
+}
+#header-biglogo span {
+  color: #f16d7f;
 }/*# sourceMappingURL=style.css.map */

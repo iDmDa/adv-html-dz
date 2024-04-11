@@ -99,6 +99,7 @@ body {
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.17);
         cursor: pointer;
         user-select: none;
+        z-index: 1;
     }
     & .triangle {
         position: absolute;
@@ -223,6 +224,7 @@ body {
     user-select: none;
     left: (130px - 262px)/2;
     padding-left: 17px;
+    z-index: 1;
     & ul {
         padding-top: 21px;
     }
@@ -344,12 +346,38 @@ body {
         display: inline-block;
         position: relative;
         padding: 5px 23px;
-        border: 1px solid black;
+        /*border: 1px solid black;*/
         cursor: pointer;
         user-select: none;
 
+        &:hover::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            background-color: #ffffff;
+            top: 30px;
+            left: 46%;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.17);
+            box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.17);
+        }
+
         &:hover .MegaMenu{
-            display: block;
+            display: grid;
+        }
+
+        &:hover:nth-child(5) .MegaMenu{
+            display: grid;
+            left: -50px;
+        }
+        &:hover:nth-child(6) .MegaMenu{
+            display: grid;
+            left: -190px;
+        }
+        &:hover:nth-child(7) .MegaMenu{
+            display: grid;
+            left: -310px;
         }
 
         h2 {
@@ -362,6 +390,8 @@ body {
 
         .MegaMenu {
             display: none;
+            grid-template-columns: 1fr 1fr 1fr; /* Задаем три равные колонки */
+            grid-gap: 10px;
             position: absolute;
             width: 846px;
             height: 310px;
@@ -370,8 +400,86 @@ body {
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.17);
             top: 35px;
             left: 0;
-            padding: 21px 21px 20px 25px; 
+            padding: 15px 21px 20px 25px; 
+            z-index: 1;
+
+            .column:nth-child(1) {
+                grid-column: 1;
+            }
+            .column:nth-child(2) {
+                grid-column: 2;
+            }
+
+            .column:nth-child(3) {
+                grid-column: 3;
+            }
+
+            ul {
+                margin-bottom: 25px;
+            }
+
+            h3 {
+                position: relative;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 0.025em;
+                color: #232323;
+                margin-bottom: 25px - 12px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 21px;
+                    left: 0px;
+                    width: 235px;
+                    height: 1px;
+                    background-color: #e8e8e8;
+                }
+            }
+
+            li {
+                list-style: none;
+                font-size: 14px;
+                line-height: 28px;
+                font-weight: 400;
+                letter-spacing: 0.025em;
+                color: #646464;
+                &:hover {
+                    color: $txt-red-color;
+                }
+            }
         }
     }
 }
 
+#header-biglogo {
+    position: relative;
+    div {
+        position: absolute;
+        top: 224px;
+        left: 254px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 97px;
+            background-color: $txt-red-color;
+            left: -24px;
+            top: 15px;
+        }
+    }
+    h1 {
+        font-size: 60px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: 0.025em;
+        color: #222222;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    span {
+        color: $txt-red-color;
+    }
+}
