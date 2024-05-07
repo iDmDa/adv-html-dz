@@ -16,6 +16,10 @@ $width-percent: 100% / $max-width;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     max-width: $max-width;
     margin: 0 auto;
