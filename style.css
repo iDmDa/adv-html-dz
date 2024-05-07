@@ -1542,4 +1542,42 @@ main {
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
+}
+
+.cart-big-img {
+  position: relative;
+  width: 100%;
+  height: 777px;
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+}
+.cart-big-img .img-box {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+}
+.cart-big-img .nav-btn {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  background-color: rgba(42, 42, 42, 0.14);
+  top: 365px;
+}
+.cart-big-img .left {
+  left: 0px;
+}
+.cart-big-img .right {
+  right: 0px;
+}
+
+.single-page {
+  transform: translate(0, -186px);
+}
+.single-page .cart-option {
+  width: 1141px;
+  height: 730px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
 }/*# sourceMappingURL=style.css.map */
