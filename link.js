@@ -26,3 +26,22 @@ let index_link = document.getElementById("header-top-logo");
 index_link.addEventListener("click", function() {
     window.location.href = "index.html";
 })
+
+let addToCart = document.getElementById("featured-items");
+addToCart.addEventListener("click", function(e) {
+    console.log(e);
+    let tgt = e.target;
+    while (!tgt.classList.contains("add-to-cart")) {
+        tgt = tgt.parentNode
+    }
+    if(!tgt.style.backgroundColor){
+        tgt.style.border = "1px solid green";
+        tgt.style.backgroundColor = "green";
+    }
+    else {
+        tgt.style.border = "";
+        tgt.style.backgroundColor = "";
+    }
+
+
+})
