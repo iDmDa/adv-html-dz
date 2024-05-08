@@ -21,3 +21,8 @@ let gotocadt = document.querySelector("#shoppingcart-menu .gotocadt");
 gotocadt.addEventListener("click", function() {
     window.location.href = "shopping_cart.html";
 });
+
+let index_link = document.getElementById("header-top-logo");
+index_link.addEventListener("click", function() {
+    window.location.href = "index.html";
+})

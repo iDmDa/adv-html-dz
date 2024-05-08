@@ -34,6 +34,7 @@ body {
   position: absolute;
   left: 14.1875%;
   top: 25px;
+  cursor: pointer;
 }
 
 #header-top-logo p {
@@ -90,6 +91,7 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 #header-browse #browse-menu {
@@ -102,6 +104,7 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   z-index: 1;
 }
@@ -167,6 +170,7 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   left: -14px;
   padding-left: 17px;
@@ -296,6 +300,7 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -348,6 +353,7 @@ body {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 #header-menulayer .menu-item:hover::after {
@@ -1074,6 +1080,7 @@ main {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 .all-products details li:hover {
@@ -1485,6 +1492,9 @@ main {
 .shopping_cart .info ::-moz-placeholder {
   color: #b1b1b1;
 }
+.shopping_cart .info :-ms-input-placeholder {
+  color: #b1b1b1;
+}
 .shopping_cart .info ::placeholder {
   color: #b1b1b1;
 }
@@ -1559,8 +1569,10 @@ main {
   border: 1px solid #eaeaea;
 }
 .cart-big-img .img-box {
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
